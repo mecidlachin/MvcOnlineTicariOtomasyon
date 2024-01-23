@@ -1,0 +1,35 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Sınıflar.Faturalar
+@{
+    ViewBag.Title = "FaturaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2 style="margin-left: 30px">Fatura Güncelleme Sayfası</h2>
+<br />
+@using (Html.BeginForm("FaturaGuncelle", "Fatura", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.FaturaID)
+    @Html.LabelFor(x => x.FaturaSeriNo, new { style = "margin-left: 30px" })
+    @Html.TextBoxFor(x => x.FaturaSeriNo, new { style = "margin-left: 30px", @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.FaturaSiraNo, new { style = "margin-left: 30px" })
+    @Html.TextBoxFor(x => x.FaturaSiraNo, new { style = "margin-left: 30px", @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.VergiDairesi, new { style = "margin-left: 30px" })
+    @Html.TextBoxFor(x => x.VergiDairesi, new { style = "margin-left: 30px", @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Tarih, new { style = "margin-left: 30px" })
+    @Html.TextBoxFor(x => x.Tarih, new { style = "margin-left: 30px", @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Saat, new { style = "margin-left: 30px" })
+    @Html.TextBoxFor(x => x.Saat, new { style = "margin-left: 30px", @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.TeslimEden, new { style = "margin-left: 30px" })
+    @Html.TextBoxFor(x => x.TeslimEden, new { style = "margin-left: 30px", @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.TeslimAlan, new { style = "margin-left: 30px" })
+    @Html.TextBoxFor(x => x.TeslimAlan, new { style = "margin-left: 30px", @class = "form-control" })
+    <br />
+    <button style="margin-left: 30px" class="btn btn-warning">Güncelle</button>
+}

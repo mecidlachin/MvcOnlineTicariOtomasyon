@@ -1,0 +1,25 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Sınıflar.Cariler
+@{
+    ViewBag.Title = "YeniCari";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2 style="margin-left: 30px">Yeni Departman Sayfası</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.CariAd, new { style = "margin-left: 30px" })
+    @Html.TextBoxFor(x => x.CariAd, new { style = "margin-left: 30px", @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.CariSoyad, new { style = "margin-left: 30px" })
+    @Html.TextBoxFor(x => x.CariSoyad, new { style = "margin-left: 30px", @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.CariSehir, new { style = "margin-left: 30px" })
+    @Html.TextBoxFor(x => x.CariSehir, new { style = "margin-left: 30px", @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.CariMail, new { style = "margin-left: 30px" })
+    @Html.TextBoxFor(x => x.CariMail, new { style = "margin-left: 30px", @class = "form-control" })
+    <br />
+    <button style="margin-left: 30px" class="btn btn-info">Kaydet</button>
+</form>
+
