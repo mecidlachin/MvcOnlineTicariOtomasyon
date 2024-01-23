@@ -7,7 +7,6 @@ using MvcOnlineTicariOtomasyon.Models.Sınıflar;
 
 namespace MvcOnlineTicariOtomasyon.Controllers
 {
-    [Authorize]
     public class DepartmanController : Controller
     {
         // GET: Departman
@@ -17,7 +16,6 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var degerler = c.Departmans.Where(x => x.Durum == true).ToList();
             return View(degerler);
         }
-        [Authorize(Roles = "A")]
         [HttpGet]
         public ActionResult DepartmanEkle()
         {
